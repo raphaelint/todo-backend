@@ -1,0 +1,27 @@
+{
+    "name": null,
+    "file_upload": null,
+    "total_amount": 9000.0,
+    "delivery_channel": null,
+    "schedule_type": null,
+    "start_date": null,
+    "end_date": null,
+    "time_of_day": null,
+    "day_of_month": 0,
+    "specific_date": null,
+    "day_of_week": null
+}
+
+{
+    "name": "Monthly sale",
+    "file_upload": "new_file.txt",
+    "total_amount": 9000.0,
+    "delivery_channel": "email",
+    "schedule_type": "MONTHLY",
+    "start_date": null,
+    "end_date": null,
+    "time_of_day": null,
+    "day_of_month": 25,
+    "specific_date": null,
+    "day_of_week": null
+}

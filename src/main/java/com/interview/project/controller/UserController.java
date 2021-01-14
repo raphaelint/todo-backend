@@ -12,7 +12,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
 @RequestMapping("api/v1/users")
 @RestController
 public class UserController {
@@ -20,7 +20,7 @@ public class UserController {
     @Autowired
     UserService service;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @GetMapping
     public ResponseEntity getAllEmployees() {
         List<User> list = service.getAllUsers();
@@ -35,14 +35,14 @@ public class UserController {
         return ResponseEntity.ok(null);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @PostMapping
     public ResponseEntity createUser(@RequestBody User user) {
         User entity = service.createUser(user);
         return ResponseEntity.ok(entity);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @PutMapping(path = "{id}")
     public ResponseEntity editUser(@RequestBody User user, @PathVariable("id") Long id) {
         User entity = service.updateUser(user, id);

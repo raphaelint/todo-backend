@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
 @RequestMapping("api/v1/todos")
 @RestController
 public class TaskController {
@@ -17,7 +17,7 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "hhttps://raphaeltodo.herokuapp.com")
     @GetMapping
     public ResponseEntity getAllEmployees() {
         List<Task> list = taskService.getAllTasks();
@@ -25,7 +25,7 @@ public class TaskController {
         return ResponseEntity.ok(list);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @DeleteMapping(path = "{id}")
     public ResponseEntity deleteEmployeeById(@PathVariable("id") Long id)
         throws RecordNotFoundException {
@@ -33,14 +33,14 @@ public class TaskController {
         return ResponseEntity.ok(null);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @PostMapping
     public ResponseEntity createUser(@RequestBody Task task) {
         Task entity = taskService.createTask(task);
         return ResponseEntity.ok(entity);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://raphaeltodo.herokuapp.com")
     @PutMapping(path = "{id}")
     public ResponseEntity editUser(@RequestBody Task task, @PathVariable("id") Long id) {
         Task entity = taskService.updateTask(task, id);
